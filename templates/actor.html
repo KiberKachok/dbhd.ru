@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+	<title>{{actor.name}}</title>
+	<meta name="description" content="Кто такой {{actor.name}}? Лучшие фильмы с {{actor.name}}! Все фильмы с {{actor.name}}"> 
+{% endblock %}
+
+
+{% block content %}
+		<h1>{{actor.name}}</h1>
+		<h4>Фильмы</h4> 
+		<br>
+		<div id="films">
+			{% for i in films_names %}
+            	<span>{{  i.year  }}</span>	<a href="\lib/{{  i.id  }}"> {{  i.title  }} </a><br>
+    		{% endfor %}
+		</div>
+{% endblock %}

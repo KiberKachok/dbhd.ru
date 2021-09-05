@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+	<title>Результат</title>
+{% endblock %}
+
+
+{% block content %}
+		<h1>Результат</h1>
+		<h4>Всего фильмов: {{ count }}</h4> 
+		<br>
+		{% for i in films %}
+        	<span title="id:{{  i.id  }}">{{  i.year  }} <a href="\lib/{{  i.id  }}"> {{  i.title  }} </a></span><br>
+		{% endfor %}
+
+		<br>
+
+		<h4>Всего актёров: {{ count_acts }}</h4> 
+		<br>
+		{% for i in actors %}
+        	<span title="id:{{  i.id  }}">{{  i.id  }} <a href="\acts/{{  i.id  }}"> {{  i.name  }} </a></span><br>
+		{% endfor %}
+{% endblock %}

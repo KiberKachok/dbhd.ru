@@ -1,2 +1,1 @@
-# dbhd.ru
- Illegal online cinema
+# yandex_project_dbhd.ru

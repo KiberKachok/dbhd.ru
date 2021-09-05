@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+	<title>Добавить фильм</title>
+{% endblock %}
+
+{% block content %}
+     	<h1> Добавление фильма </h1>
+		<form action="" method="post" enctype="multipart/form-data">
+
+	    {{ form.csrf_token() }}
+
+	    {% for field in form if field.name != "csrf_token" %}
+		<p>{{ field }}
+		    {% for error in field.errors %}
+			{{ error }}
+		    {% endfor %}
+		</p>
+	    {% endfor %}
+		</form>
+{% endblock %}

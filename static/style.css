@@ -1,0 +1,104 @@
+body {
+	text-align: center;
+}
+
+.main {
+    width: 40%;
+	margin: 0 auto;
+	margin-top: 3em;
+	text-align: left;
+
+}
+/*@media screen and (max-width: 500px) {
+	.main {
+		width: 40% !important;
+	}
+
+	p{
+		font-size: 80%;
+		font-family: 'Montserrat', sans-serif;
+	}
+	a
+	{
+		font-size: 80%;
+		font-family: 'Montserrat', sans-serif;
+	}
+}
+*/
+@media screen and (max-width: 700px) {
+	.main {
+		width: 40% !important;
+	}
+}
+
+/*Укажи теги через запятую, чтобы применить один стиль*/
+h2, h1, h4{
+	font-family: 'Montserrat', sans-serif;
+
+	/*По умолчанию отступы сверху и снизу у заголовков 0.67, но мы всегда можем переопределить*/
+	margin-top: 0.3em;  
+	margin-bottom: 0.3em; 
+}
+
+/*Шрифт и ссылки везде одинаковые*/
+p{
+	font-size: 80%;
+	font-family: 'Montserrat', sans-serif;
+}
+
+a
+{
+	font-size: 80%;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#film{
+	width: 100%;
+}
+
+
+#logo{
+	font-weight: 600;
+	color: #C0C0C0;
+	text-decoration: none;
+}
+
+#description {
+    width: 70%;
+    float: left;
+    box-sizing: border-box;
+    padding-right: 1em;
+}
+
+#actor_list {
+    width: 30%;
+	float: right;
+}
+
+#alt-title {
+	color: #C0C0C0;
+	font-weight: 400;
+}
+
+#footer{
+	float: left;
+	margin:0 auto;
+	text-align:center;
+	width: 100%;
+}
+
+form {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+input, textarea {
+	width: 100%;
+}
+#feedback{
+		font-family: 'Arial', sans-serif;
+		margin-bottom: 10%;
+}
+
+.meta{
+
+}

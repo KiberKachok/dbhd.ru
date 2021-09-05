@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html> 
+<head>
+	<title>dbhd.ru</title>
+	<meta charset="utf-8">
+	<link href="\static/style.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap&subset=cyrillic" rel="stylesheet">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	<meta name="description" content="Смотреть онлайн фильмы, самый лучший плеер, самая быстрая загрузка, без смс и регистрации!"> 
+	<style type="text/css">
+		.page-inner {
+		  height: 83vh;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		}
+
+		.search-inner {
+/*		  background: #000;
+		  width: 30%;
+		  color: #fff;*/
+		}
+	</style>
+</head>
+<body>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript" >
+	   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+	   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+	   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+	   ym(61860454, "init", {
+	        clickmap:true,
+	        trackLinks:true,
+	        accurateTrackBounce:true,
+	        webvisor:true
+	   });
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/61860454" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+	<div class="main" id="index-page">
+		<body class="page-inner">
+			<div class="search-inner">
+				<h1> dbhd.ru - Поиск </h1>
+				<form action="" method="post" enctype="multipart/form-data">
+
+			    {{ form.csrf_token() }}
+
+			    {% for field in form if field.name != "csrf_token" %}
+				<p>{{ field }}
+				    {% for error in field.errors %}
+					{{ error }}
+				    {% endfor %}
+				</p>
+			    {% endfor %}
+				</form>
+				<div id="footer">
+					<pre><a href="\add_film">Добавить фильм</a>   <a href="\faq">FAQ</a></pre>
+			 	</div> 
+			</div>
+		</body>
+	</div>
+</body>
+</html>
